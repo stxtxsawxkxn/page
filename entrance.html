@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>password</title>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #151515;
+      color: #ddd;
+      font-family: sans-serif;
+    }
+
+      <!-- 우클릭 금지 -->
+    img {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+    .password-page {
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+.intro-image {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+    .guide {
+      width: 100%;
+      max-width: 360px;
+      margin-bottom: 22px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .list {
+      margin-top: 18px;
+      line-height: 1.9;
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    input {
+      width: 260px;
+      padding: 14px 16px;
+      border: 1px solid #444;
+      border-radius: 12px;
+      background: #1f2020;
+      color: white;
+      font-size: 16px;
+      outline: none;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 260px;
+      margin-top: 12px;
+      padding: 14px;
+      border: 0;
+      border-radius: 12px;
+      background: #333;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .error {
+      margin-top: 12px;
+      color: #888;
+      font-size: 14px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="password-page">
+
+      <!-- 상단 이미지 -->
+  <img src="logo1.png" class="intro-image">
+    <div class="guide">
+      This is a list of pages that you can view.<br>
+      Please enter the page you want to view below.
+
+      <div class="list">
+        MICHAEL<br>
+        ARK<br>
+        MIGI<br>
+        ???
+      </div>
+    </div>
+
+    <input id="password" type="text" placeholder="Enter name">
+    <button onclick="checkPassword()">Enter</button>
+    <div id="error" class="error"></div>
+  </div>
+
+  <script>
+function checkPassword() {
+  const input = document
+    .getElementById("enter a name")
+    .value
+    .trim()
+    .toLowerCase();
+
+  if (input === "미카엘" || input === "michael") {
+    location.href = "michael.html";
+  }
+
+  else if (input === "아크" || input === "ark") {
+    location.href = "ark.html";
+  }
+
+  else if (input === "미기" || input === "migi") {
+    location.href = "migi.html";
+  }
+
+  else {
+    document.getElementById("error").textContent =
+      "Invalid a name";
+  }
+}
+
+    document.getElementById("password").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        checkPassword();
+      }
+    });
+  </script>
+  <script>
+  document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+  });
+</script>
+  
+</body>
+</html>
