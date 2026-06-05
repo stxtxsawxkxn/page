@@ -8,7 +8,6 @@
 
 <style>
 html,
-html,
 body {
   margin: 0;
   width: 100%;
@@ -23,7 +22,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 500px;
+  max-width: 1080px;
   z-index: 100;
   background: #151515;
 }
@@ -31,13 +30,14 @@ body {
 .top-bar img {
   width: 100%;
   display: block;
+  margin-bottom: -1px;
 }
 
 .chat-scroll {
   height: 100dvh;
   overflow-y: auto;
   width: 100%;
-  max-width: 500px;
+  max-width: 1080px;
   margin: 0 auto;
   background: #151515;
   padding-top: min(13.72vw, 68.6px);
@@ -54,9 +54,10 @@ body {
   padding: 0;
   border: 0;
 }
-  line-height: 0;
-font-size: 0;
-display: block;
+.chat-scroll::-webkit-scrollbar {
+  display: none;
+}
+  
 </style>
 </head>
 
