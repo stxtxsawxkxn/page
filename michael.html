@@ -15,7 +15,13 @@ body {
   background: #000;
   overflow: hidden;
 }
-
+    /* 우클릭 금지 */
+    img {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
 .top-bar {
   position: fixed;
   top: 0;
